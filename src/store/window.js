@@ -29,6 +29,22 @@ const useWindowStore = create(
         const win = state.windows[windowKey];
         win.zIndex = state.nextZIndex++;
       }),
+    minimizeWindow: (windowKey) =>
+      set((state) => {
+        const win = state.windows[windowKey];
+        if (!win) return;
+        win.isOpen = false;
+        win.zIndex = state.nextZIndex;
+        win.data = null;
+      }),
+    maximizeWindow: (windowKey) =>
+      set((state) => {
+        const win = state.windows[windowKey];
+        if (!win) return;
+        win.isOpen = false;
+        win.zIndex = state.nextZIndex;
+        win.data = null;
+      }),
   })),
 );
 
