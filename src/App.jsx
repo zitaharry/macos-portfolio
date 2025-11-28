@@ -1,4 +1,4 @@
-import { Dock, Navbar, Welcome } from "@components";
+import { Dock, Navbar, Welcome, Home } from "@components";
 import {
   Terminal,
   Safari,
@@ -26,6 +26,7 @@ const App = () => {
       <Text />
       <Image />
       <Contact />
+      <Home />
     </main>
   );
 };
